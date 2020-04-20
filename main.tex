@@ -113,6 +113,27 @@ Al final de cada etapa, se evaluaba el desarrollo del modelo, la comprensión de
 
 La metodología me parece apropiada, pues entrega la autonomía suficiente para desarrollar algo propio y aprender en el camino y para sentirse un aporte para el equipo. La evaluación al final de cada etapa es necesaria para no perder el foco y para resolver las distintas dificultades que se presentaron.
 \section{Solución}
+A continuación, se hace una descripción de la solución al problema, mencionando las herramientas y recursos utilizados, las funcionalidades implementadas y los resultados obtenidos, como también el uso y la evaluación de la solución descrita.
+\subsection{Herramientas Utilizadas}
+Se hizo un uso extensivo del lenguaje de Programación Python 3.7, que fue un requisito de la empresa al definir la solución. Junto con este, se hizo uso de las librerías tradicionales de Data Sciences: Numpy, Pandas, y SKLearn, para hacer Exploratory Data Analysis y la libreríade visualización Plotly, que permite exportar archivos en HTML. \\
+El desarrollo se llevo a cabo ocupando el framework Anaconda, utilizando ambientes virtuales para encapsular el proyecto y Desarrollando en su IDE, Spypder, que permite un la visualización de variables y el debugging de los procedimientos de manera efectiva y rápida.\\
+En cuanto al desarrollo de la red neuronal, se hizo uso en primera instancia del framework Tensorflow 2.0 y, en segunda instancia, se utilizó la librería Keras, como capa superior sobre Tensorflow 1.15, lo cual facilitó el desarrollo.\\
+Intermitentemente, se utilizó la GPU de Google Colab para tener más potencia al correr el modelo, pero luego se decidió migrar al computador encargado de los procesos más pesados en el equipo, Juanito, utilizando la CPU de este para generar los resultados, cuando era necesario dejar corriendo el programa por la noche.
+\subsection{Implementación}
+Para abordar el problema, se decidió llevar a cabo la implementación de una red neuronal recurrente, en particular se utilizó la arquitectura Long-Short-Term-Memory (LSTM). Esta arquitectura la eligió el equipo pues, según la literatura, es adecuada para utilizarla sobre un dataset con data secuencial, y en consecuencia poder llevar a cabo un \textit{multi-step forecasting}.\\
+El equipo trabaja con datos secuenciales (venta de unidades de un productivo por día) y bajo el supuesto de que la data es estacional, es decir, los datos presentan un patrón de comportamiento anualmente.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{estacionalidad-telefonia.png}
+    \caption{Estacionalidad sublínea J1105}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Resultados}
+\subsection{Evaluación}
+
+
+
 \section{Discusión y reflexión}
 \section{Conclusiones}
 \section{Anexo}
