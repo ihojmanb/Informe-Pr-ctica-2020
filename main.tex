@@ -76,9 +76,42 @@
 
 \section{Resumen}
 \section{Introducción}
-\section{Problema}
-\section{Objetivos}
+Falabella es una empresa de retail fundada en 1889, que se caracteriza por ser la empresa más grande a nivel latinoamericano en este rubro. Se encuentra en varios países de la región y cuenta con más de 100 tiendas físicas en total, además de su tienda online, donde se genera una parte importante de las ventas. \\
+
+La empresa, al igual que todas las grandes empresas de retail a nivel global, comenzó con un proceso de transformación digital importante, dando un giro en la visión del negocio de manera estructural, en donde se reconoce el uso la importancia de internet en el mundo de hoy, y la urgencia de tener una presencia fuerte en las redes globales digitales, potenciando la tienda online y adquiriendo en 2018 Linio, el marketplace digital lider de la región, así como la implementación del uso de nuevas tecnologías que le permitan a la empresa extraer conocimiento tanto de sus clientes como de sus productos y procesos internos, requeridos en la  gestión y logística de alta complejidad que existe en la organización.\\
+
+
+
+Es así como el área de planificación de la empresa, Falabella Planning, decide formar un equipo de ingenieros para potenciar el área de logística con el uso de herramientas de Inteligencia Artificial, formando la unidad de Inteligencia Artificial de Planning. El equipo, con dos años de existencia, se conforma por Data Scientists y Data Engineers y tiene por objetivo apoyar en la decisión estratégica al equipo de lógistica de uno de los centros de distribución de Falabella.
+\\Precisamente, el equipo se encuentra en el desarrollo de modelos para predecir la cantidad de productos vendidos en cada una de las categorías (de ahora en adelante, sublíneas), con el fin de poder decidir sobra la dotación de personal a contratar para hacerse cargo del \textit{picking} de la mercadería. \\
+
+El equipo se encuentra en una etapa de exploración en el modelamiento del problema, y si bien se encontraba desarrollando  modelos de aprendizaje de máquina o de caracter estadístico, que entregaban resultados correctos, tenían intenciones de probar modelos que hicieran uso de redes neuronales.\\ 
+Debido a la falta de tiempo, el equipo decide recurrir a la contratación de practicantes que pudieran explorar este tipo de técnicas.
+\section{Problema Abordado}
+El problema que actualmente Aborda el equipo de IA Planning es el siguiente: Todas las semanas Falabella debe repartir mercadería tanto a las tiendas, para abastecerlas de productos, como a los domicilios de sus clientes, cada vez que hacen una compra on-line. Para esto, Falabella tiene personal contratado de manera fija para que se haga cargo de esta labor en el centro de distribución. Como es de esperarse, no todas las semanas son iguales para Falabella en términos de venta. Semanas previas a Navidad o la entrada a clases de los escolares implican un alto movimiento de productos, y por lo tanto se requiere de una mayor cantidad de personal. \\ Es por esto que Falabella necesita contratar personal adicional por una semana, todas las semanas. \\ 
+
+Como la cantidad de productos vendidos varía, también lo hace la cantidad de personal contratado. Si se subestima la dotación de personal, se retrasa la salida de ciertas encomiendas, lo que tiene un impacto en la satisfacción de los clientes pues empeora el servicio. Si se sobreestima la dotación de personal, se tiene trabajadores con capacidad ociosa. \\
+Las consecuencias directas de este problema son por una parte la insatisfacción del cliente con el servicio, y por otra la pérdida de utilidades a parti de la asignación equivocada de los recursos. \\
+
+Como el objetivo de toda empresa es la maximización de las utilidades, se hace relevante resolver este problema, para lo cual es necesario cumplir con el nivel de servicio planificado sin incurrir en la sobre o sub estimación de personal necesario.
+
+\section{Objetivos de la Práctica}
+El objetivo principal de la práctica es poner a prueba un algoritmo de aprendizaje automático basado en redes neuronales recurrentes, que sea capaz de hacer una estimación a 30 días de las ventas de una sublinea en particular, utilizando para ello un set de datos construído por la misma organización. \\ Este dataset consiste en el recuento de unidades vendidas por día de una sublinea de productos, junto con los distintos precios de venta, esto es, el precio original y el precio con descuento, y data temporal como el día, día del año, día de la semana, mes y semana del año correspondientes. \\
+Los desafíos técnicos principales son, en primera instancia, ser capaces de hacer una predicción razonable a partir de un set de datos pequeños (menos de 3.000 filas de datos) y en segunda instancia, ser rigurosos con la implementación del modelo, pues es frecuente en el desarrollo de modelos de aprendizaje supervisado pasarle la etiqueta al modelo en la etapa de entrenamiento y auto engañarnos con el resultado que nuestro modelo arroje.\\
+
+Dado que el equipo se encuentra en una etapa exploratoria, el uso que se le da al resultado de la práctica tiene que ver con cómo guiar el trabajo a futuro. Si el modelo resulta ser un buen predictor, se sigue ahondando en él, expandiendo su uso y modificándolo. Si no resulta provechoso, se analizan los motivos por los cuales falla y se descarta momentaneamente para dar paso al desarrollo de otros modelos apropiados para forecasting.\\
+
+Por lo tanto, los benficiarios directos de la práctica son el mismo equipo de IA Planning, pues les permite hacer una busqueda de anchura de los algoritmos que creen serles útiles.
+
 \section{Metodología}
+El primer paso en la construcción de la solución es la exploración del set de datos. Una vez que se haya manipulado, experimentado y visualizado para ganar familiaridad con este, se pasó a la etapa de investigación del modelo a implementar.\\
+En esta etapa es necesario entender los fundamentos teóricos como prácticos, ver implementaciones existentes del modelo y los resultados que arrojan. Una vez que se entiende el funcionamiento del modelo, se pasa a la implementación de este.\\ 
+Aquí, la implementación es incremental, se comienza con un modelo simple y a medida que responde a los resultados esperados, se le agregan capaz de complejidad hasta llegar a al nivel que el problema requiere para ser resuelto.\\ 
+Culminada esta etapa, se compara con los modelos ya implementados y se vuelve a iterar sobre la implementación, corrigiendo errores y agragando nuevas características que ayuden a conseguir el mejor resultado. \\
+
+Al final de cada etapa, se evaluaba el desarrollo del modelo, la comprensión de este, y el resultado obtenido en conjunto con mi supervisor, Gerd Kimer, Data Scientist del equipo, con quien intercambié puntos de vista, resolví dudas, programé en conjunto y recibí feedback del trabajo que estaba haciendo. \\
+
+La metodología me parece apropiada, pues entrega la autonomía suficiente para desarrollar algo propio y aprender en el camino y para sentirse un aporte para el equipo. La evaluación al final de cada etapa es necesaria para no perder el foco y para resolver las distintas dificultades que se presentaron.
 \section{Solución}
 \section{Discusión y reflexión}
 \section{Conclusiones}
